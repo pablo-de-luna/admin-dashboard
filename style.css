@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
 /* End of CSS reset */
 
 body {
-  background-color: #121212 ;
-  color: #d5d8dc;
+  background-color: #131212 ;
+  color: #dbd7d3;
+}
+
+img[src$=svg] {
+  filter: invert(60%);
 }
