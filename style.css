@@ -53,3 +53,4 @@ body {
 img[src$=svg] {
   filter: invert(60%);
 }
+
