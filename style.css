@@ -54,3 +54,6 @@ img[src$=svg] {
   filter: invert(60%);
 }
 
+p {
+  max-width: 700px;
+}
