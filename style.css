@@ -67,38 +67,19 @@ body {
   height: 100vh;
 }
 
-header,
-.project-nav,
-.account-container,
-.sidebar-section.announcements,
-.sidebar-section.announcements > div,
-.menu-list.primary {
-  border-bottom: 1px solid var(--dark-lines-color);
-}
-
-.menu-sidebar {
-  border-right: 1px solid var(--dark-lines-color);
-}
-
-.info-sidebar,
-.project-control-buttons a {
-  border-left: 1px solid var(--dark-lines-color);
-}
-
 header {
   grid-area: 1 / 1 / 2 / -1;
   display: grid;
   grid-template-columns: subgrid; 
-  padding: 20px;
+  padding: 0 20px 0;
 }
 
 .logo  {
   grid-column: 1;
-  justify-content: center;
 }
 
 .logo a {
-  align-items: center;
+  align-items: end;
 }
 
 .logo img {
@@ -110,6 +91,7 @@ header {
 .logo div {
   font-size: 1.6rem;
   font-weight: bolder;
+  line-height: 1.4rem;
 }
 
 .user-welcome-banner {
@@ -155,10 +137,14 @@ header > div {
 
 main {
   grid-area: 2 / 2 / -1 / -2;
+  display: grid;
+  grid-template-rows: 35px 1fr;
 }
 
 .project-nav {
+  grid-row: 1;
   display: flex;
+  align-items: center;
 }
 
 .search-input {
@@ -174,17 +160,26 @@ input {
   width: 100%;
 }
 
+.articles-grid {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  margin: 15px;
+}
+
+.project-card {
+  border: 1px solid gray;
+}
+
 .menu-sidebar {
-  grid-area: 2 / 1 / -1 / 2;
+  grid-area: 3 / 1 / -1 / 2;
 }
 
 .menu-item a {
   display: flex;
   flex-wrap: nowrap;
-}
-
-.project-card {
-  border: 1px solid gray;
 }
 
 .info-sidebar {
