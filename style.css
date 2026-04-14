@@ -155,8 +155,6 @@ header > div {
 .user-welcome-banner img {
   height: 50px;
   width: auto;
-  border: var(--dark-division-borders);
-  border-radius: 100%;
 }
 
 .user-welcome-banner > div {
@@ -340,8 +338,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   grid-row: 3;
 }
 
+
 img[src$=svg] {
   filter: invert(70%);
+}
+
+img[src$=jpg] {
+  border: var(--dark-division-borders);
+  border-radius: 100%;
 }
 
 a {
