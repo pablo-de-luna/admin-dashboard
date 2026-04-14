@@ -1,5 +1,13 @@
 /* THE LORD IS MY SHEPHERD, I LACK NOTHING */
 
+:root {
+  --fallback-font-stack:
+    system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --dark-background-color: #131312;
+  --dark-lines-color: #444140; 
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -45,16 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* End of CSS reset */
 
-:root {
-  --fallback-font-stack:
-    system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --dark-background-color: #131312;
-  --dark-lines-color: #444140; 
-}
-
 /* body * {
-  border: 1px dotted rgb(82, 55, 20);
+  border: 1px dotted #523714;
 } */
 
 body {
@@ -65,6 +65,25 @@ body {
   grid-template-columns: 250px 1fr 300px;
   grid-template-rows: 100px 35px 1fr 1fr;
   height: 100vh;
+}
+
+header,
+.project-nav,
+.account-container,
+.sidebar-section-name,
+.announcement-card,
+.trend-user-card,
+.logo {
+  border-bottom: 1px solid var(--dark-lines-color);
+}
+
+.user-welcome-banner,
+main {
+  border-left: 1px solid var(--dark-lines-color);
+}
+
+main {
+  border-right: 1px solid var(--dark-lines-color);
 }
 
 .logo  {
