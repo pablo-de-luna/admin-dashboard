@@ -87,7 +87,7 @@ body {
 }
 
 header,
-.project-content,
+.project-description,
 .card-topbar,
 .project-nav,
 .account-container,
@@ -297,7 +297,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   width: auto;
 }
 
-.project-content {
+.project-description {
   background-color: var(--dark-card-content-bg);
   margin-bottom: 10px;
   padding: 10px;
@@ -330,6 +330,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   flex-wrap: nowrap;
 }
 
+.sidebar-section-name {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
 .sidebar-section.announcements {
   grid-row: 2;
 }
@@ -352,3 +357,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* HOVER ANIMATION  */
+
+/* body div:hover {
+  transition: 0.3s;
+  transform: translateY(-2px);
+  filter: brightness(130%);
+} */
