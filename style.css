@@ -323,20 +323,52 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .account-container {
   grid-row: 1;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .account-container a {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
+  justify-content: centeru;
+}
+
+.account-container img {
+  height: 20px;
+  width: auto;
+  margin-right: 5px;
+}
+
+
+.account-container div:first-of-type {
+  font-weight: bolder;
+  margin-right: 5px;
 }
 
 .sidebar-section-name {
   font-size: 1.2rem;
   font-weight: bolder;
+  padding: 20px 0 5px 20px;
 }
 
 .sidebar-section.announcements {
   grid-row: 2;
+}
+
+.announcement-card {
+  padding: 10px 20px;
+}
+
+.ann-card-title {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.ann-card-content {
+  font-size: 0.7rem;
 }
 
 .sidebar-section.trending {
