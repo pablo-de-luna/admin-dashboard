@@ -20,8 +20,8 @@
     --dark-bg-color-primary: #161515;
     --dark-bg-color-secondary: #0c0c0c;
     --dark-font-color: #dbd7d3;
-    --dark-color-primary: #cfac75;
-    --dark-color-secondary: #aa9a78;
+    --dark-color-primary: #dbc397;
+    --dark-color-secondary: #c2b391;
     --dark-color-3: #e1d9d2;
     --dark-color-4: #b2b2b2;
     --dark-lines-color: #3e3e3e;
@@ -124,8 +124,8 @@ main {
   height: 16px;
   width: auto;
   filter: 
-    brightness(0) invert(70%) sepia(5%) saturate(1500%) hue-rotate(350deg)
-    contrast(78%);
+    brightness(0) invert(85%) sepia(5%) saturate(900%) hue-rotate(350deg)
+    contrast(70%);
 }
 
 .logo div {
@@ -219,9 +219,8 @@ main {
 }
 
 .search-input {
-  flex: 1;
+  flex: 1 0 150px;
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   margin-left: 20px;
 }
@@ -394,6 +393,30 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .sidebar-section.trending {
   grid-row: 3;
+  align-content: center;
+}
+
+.trend-user-card a {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.trend-user-card img {
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.trend-user-name {
+  font-weight: bold;
+  color: var(--dark-color-3);
+}
+
+.trend-user-description {
+  font-size: 0.7rem;
+  color: var(--dark-color-4);
 }
 
 .user-name {
