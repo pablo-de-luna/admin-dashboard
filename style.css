@@ -17,7 +17,7 @@
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-:root.dark-theme {
+:root.dark {
     --bg-color-primary: #161515;
     --bg-color-secondary: #0c0c0c;
     --color-primary: #dbc397;
@@ -31,7 +31,7 @@
     --icon-filter: invert(60%);
 }
 
-:root.light-theme {
+:root.light {
     --bg-color-primary: #e0e0e0;
     --bg-color-secondary: #d3d3d3;
     --color-primary: #4a6981;
@@ -241,7 +241,6 @@ main {
 .project-nav {
   grid-row: 1;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -249,6 +248,7 @@ main {
   display: flex;
   align-items: center;
   margin-left: 20px;
+  width: 100%;
 }
 
 .search-input img {
@@ -262,7 +262,11 @@ input {
   border: none;
   background-color: var(--bg-color-primary);
   color: var(--color-3);
-  padding-left: 10px;
+  font-size: 0.8rem;
+  padding-left: 5px;
+  margin-left: 5px;
+  height: 34px;
+  width: 100%;
 }
 
 input:focus {
@@ -346,6 +350,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   grid-row: 3 / 5;
   display: grid;
   grid-template-rows: subgrid;
+  justify-content: center;
+}
+
+ul {
+  padding: 0;
 }
 
 .menu-list.primary {
@@ -468,7 +477,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 img[src$=jpg] {
   border: var(--division-borders);
-  border-radius: 15%;
+  border-radius: 100%;
 }
 
 a {
@@ -481,6 +490,36 @@ li {
 }
 
 /* MAKE HOVER ANIMATIONS AND OTHER EFFECTS  */
+
+.logo a:hover,
+.header-buttons > *:hover,
+.card-buttons a:hover,
+.project-control-buttons a:hover {
+  transition: 0.3s;
+  transform: translateY(-2px);
+  filter: brightness(150%);
+}
+
+.menu-item:hover {
+  transition: 0.3s;
+  transform: translateX(2px); 
+  filter: brightness(150%);
+}
+
+.trend-user-card a > div:hover,
+.announcement-card:hover,
+.account-container:hover,
+.search-input:hover {
+  transition: 0.3s;
+  filter: brightness(150%);
+}
+
+.project-card:hover {
+  box-shadow: 5px 5px 15px black;
+  transition: 0.3s;
+  transform: translateY(-2px);
+  filter: brightness(130%);
+}
 
 /* body div:hover {
   transition: 0.3s;
