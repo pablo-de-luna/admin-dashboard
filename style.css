@@ -193,30 +193,32 @@ header > div {
   font-weight: bolder;
 }
 
-.notification-btn {
+.header-buttons {
   grid-column: 2;
   justify-self: end;
   margin-right: 40px;
   align-items: center;
+  gap: 15px;
+  font-size: 0.7rem;
 }
 
-.notification-btn a {
-  align-items: center;
-}
-
-.notification-btn img {
-  height: 15px;
+.header-buttons img {
+  height: 20px;
   width: auto;
   filter: var(--icon-filter);
 }
 
-.notification-btn div {
+.notification-button {
+  align-items: center;
+}
+
+.notification-button div {
   padding-top: 2px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .logo a,
-.notification-btn a,
+.header-buttons a,
 .user-welcome-banner {
   display: flex;
   flex-wrap: nowrap;
