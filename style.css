@@ -549,9 +549,11 @@ li {
   .logo a {
     margin-left: calc(100% - 230px); 
   }
+
   .menu-item {
     margin-left: calc(100% - 230px); 
   }
+  
   .header-buttons {
     grid-column: 2;
     justify-self: end;
@@ -559,5 +561,32 @@ li {
     align-items: center;
     gap: 15px;
     font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    grid-template-columns: 70px minmax(150px, 1000px) minmax(270px, 4fr);
+  }
+  .logo img {
+    height: 25px;
+  }
+  .logo div {
+    display: none;
+  }
+  .project-control-buttons div {
+    width: 80px;
+  }
+  .menu-item {
+    margin: 0;
+    padding: 7px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .menu-item img {
+    margin-right: 0;
+  }
+  .menu-item div {
+    display: none;
   }
 }
