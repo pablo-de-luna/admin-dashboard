@@ -18,31 +18,37 @@
 }
 
 :root.dark {
-    --bg-color-primary: #161515;
-    --bg-color-secondary: #0c0c0c;
-    --color-primary: #dbc397;
-    --color-secondary: #c2b391;
-    --color-3: #e1d9d2;
-    --color-4: #b2b2b2;
-    --lines-color: #3e3e3e;
-    --division-borders: 1px solid var(--lines-color);
-    --logo-filter: brightness(0) invert(85%) sepia(5%) saturate(900%)
-        hue-rotate(350deg) contrast(70%);
-    --icon-filter: invert(60%);
+  --bg-color-primary: #161515;
+  --bg-color-secondary: #0c0c0c;
+  --color-primary: #dbc397;
+  --color-secondary: #c2b391;
+  --color-3: #e1d9d2;
+  --color-4: #b2b2b2;
+  --lines-color: #3e3e3e;
+  --division-borders: 1px solid var(--lines-color);
+  --logo-filter: brightness(0) invert(85%) sepia(5%) saturate(900%)
+      hue-rotate(350deg) contrast(70%);
+  --icon-filter: invert(60%);
+  --hover-brightness-high: brightness(130%);
+  --hover-brightness-low: brightness(130%);
+  --hover-card-shadow: 5px 5px 15px black;
 }
 
 :root.light {
-    --bg-color-primary: #e0e0e0;
-    --bg-color-secondary: #d3d3d3;
-    --color-primary: #4a6981;
-    --color-secondary: #436376;
-    --color-3: #20201f;
-    --color-4: #353131;
-    --lines-color: #898a8b;
-    --division-borders: 1px solid var(--lines-color);
-    --logo-filter: brightness(0) invert(36%) sepia(33%) saturate(452%)
-      hue-rotate(159deg) brightness(93%) contrast(92%);
-    --icon-filter: invert(40%);
+  --bg-color-primary: #e0e0e0;
+  --bg-color-secondary: #d3d3d3;
+  --color-primary: #4a6981;
+  --color-secondary: #436376;
+  --color-3: #373734;
+  --color-4: #484343;
+  --lines-color: #898a8b;
+  --division-borders: 1px solid var(--lines-color);
+  --logo-filter: brightness(0) invert(36%) sepia(33%) saturate(452%)
+    hue-rotate(159deg) brightness(93%) contrast(92%);
+  --icon-filter: invert(40%);
+  --hover-brightness-high: brightness(80%);
+  --hover-brightness-low: brightness(105%);
+  --hover-card-shadow: 5px 5px 15px #b2b2b2;
 }
 
 /* CSS Reset */
@@ -489,42 +495,41 @@ li {
   list-style: none;
 }
 
-/* MAKE HOVER ANIMATIONS AND OTHER EFFECTS  */
-
 .logo a:hover,
 .header-buttons > *:hover,
 .card-buttons a:hover,
 .project-control-buttons a:hover {
   transition: 0.3s;
   transform: translateY(-2px);
-  filter: brightness(150%);
+  font-weight: bold;
+  filter: var(--hover-brightness-high);
 }
 
 .menu-item:hover {
   transition: 0.3s;
   transform: translateX(2px); 
-  filter: brightness(150%);
+  font-weight: bold;
+  filter: var(--hover-brightness-high);
 }
 
 .trend-user-card a > div:hover,
 .announcement-card:hover,
-.account-container:hover,
+.account-container div:hover,
 .search-input:hover {
   transition: 0.3s;
-  filter: brightness(150%);
+  font-weight: bold;
+  filter: var(--hover-brightness-high);
+}
+
+.search-input:hover {
+  filter: var(--hover-brightness-low);
 }
 
 .project-card:hover {
-  box-shadow: 5px 5px 15px black;
   transition: 0.3s;
   transform: translateY(-2px);
-  filter: brightness(130%);
+  filter: var(--hover-brightness-low);
+  box-shadow: var(--hover-card-shadow);
 }
-
-/* body div:hover {
-  transition: 0.3s;
-  transform: translateY(-2px);
-  filter: brightness(130%);
-} */
 
 /* MAKE MEDIA QUERRIES FOR TABLET, MOBILE AND 4K VIEWPORTS */
