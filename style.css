@@ -386,6 +386,8 @@ ul {
 }
 
 .menu-item img {
+  height: 25px;
+  width: auto;
   margin-right: 10px;
   filter: var(--icon-filter);
 }
@@ -533,9 +535,5 @@ li {
   filter: var(--hover-brightness-low);
   box-shadow: var(--hover-card-shadow);
 }
-
-/* MAKE CLICK/HOVER AREA OF ELEMENTS AND BUTTONS THE RIGHT SIZE */
-
-/* MAKE HTML HEIGHT AND WIDTH ICONS AND IMAGES VALUE SAME AS CSS */
 
 /* MAKE MEDIA QUERRIES FOR TABLET, MOBILE AND 4K VIEWPORTS */
