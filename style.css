@@ -166,6 +166,7 @@ header {
   grid-row: 1;
   display: grid;
   grid-template-columns: subgrid; 
+  grid-template-columns: minmax(150px, 1000px) minmax(270px, 4fr);
 }
 
 header > div {
@@ -241,7 +242,7 @@ main {
   grid-column: 2;
   grid-row: 2 / -1;
   display: grid;
-  grid-template-rows: 35px;
+  grid-template-rows: 35px 1fr;
 }
 
 .project-nav {
@@ -358,7 +359,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   grid-column: 1;
   grid-row: 3 / 5;
   display: grid;
-  grid-template-rows: subgrid;
+  grid-template-rows: 400px 1fr;
 }
 
 ul {
@@ -395,7 +396,7 @@ ul {
   grid-column: 3;
   grid-row: 2 / -1;
   display: grid;
-  grid-template-rows: subgrid;
+  grid-template-rows: 35px 400px 1fr;
 }
 
 .account-container {
