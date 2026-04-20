@@ -29,8 +29,8 @@
   --logo-filter: brightness(0) invert(85%) sepia(5%) saturate(900%)
       hue-rotate(350deg) contrast(70%);
   --icon-filter: invert(60%);
-  --hover-brightness-high: brightness(130%);
-  --hover-brightness-low: brightness(130%);
+  --hover-icon-filter: invert(60%) sepia(100%);
+  --hover-bg-color: #1e1d1d;
   --hover-card-shadow: 5px 5px 15px black;
 }
 
@@ -46,8 +46,8 @@
   --logo-filter: brightness(0) invert(36%) sepia(33%) saturate(452%)
     hue-rotate(159deg) brightness(93%) contrast(92%);
   --icon-filter: invert(40%);
-  --hover-brightness-high: brightness(80%);
-  --hover-brightness-low: brightness(105%);
+  --hover-icon-filter: invert(35%) sepia(100%) hue-rotate(160deg);
+  --hover-bg-color: #e9e9e9;
   --hover-card-shadow: 5px 5px 15px #b2b2b2;
 }
 
@@ -504,40 +504,48 @@ li {
   list-style: none;
 }
 
-.logo a:hover,
-.header-buttons > *:hover,
-.card-buttons a:hover,
-.project-control-buttons a:hover {
-  transition: 0.1s;
-  transform: translateY(-2px);
-  font-weight: bold;
-  filter: var(--hover-brightness-high);
+.card-buttons img:hover,
+.menu-item:hover img,
+#theme-button:hover img,
+.notification-button:hover img {
+  transition: 100ms;
+  filter: var(--hover-icon-filter);
 }
 
-.menu-item:hover {
-  font-weight: bold;
-  background-color: var(--bg-color-primary);
-  filter: var(--hover-brightness-low);
+.menu-item:hover div,
+.account-container:hover div,
+.project-card:hover p,
+.announcement-card:hover div,
+.trend-user-card:hover .trend-user-name,
+.project-control-buttons div:hover,
+.notification-button:hover div {
+  transition: 100ms;
+  color: var(--color-primary);
 }
 
-.trend-user-card a > div:hover,
+.logo:hover div {
+  transition: 1s;
+  color: var(--color-3);
+}
+
+.project-card:hover,
 .announcement-card:hover,
-.account-container div:hover,
-.search-input:hover {
-  transition: 0.1s;
-  font-weight: bold;
-  filter: var(--hover-brightness-low);
-}
-
-.search-input:hover {
-  filter: var(--hover-brightness-low);
+.search-input:hover input,
+.menu-item:hover {
+  transition: 100ms;
+  background-color: var(--hover-bg-color);
 }
 
 .project-card:hover {
-  transition: 0.1s;
+  transition: 100ms;
   transform: translateY(-2px);
-  filter: var(--hover-brightness-low);
   box-shadow: var(--hover-card-shadow);
+} 
+
+.card-buttons img:hover,
+.project-control-buttons div:hover a {
+  transition: 100ms;
+  transform: translateY(-2px);
 }
 
 /* MAKE MEDIA QUERRIES FOR TABLET, MOBILE AND 4K VIEWPORTS */
